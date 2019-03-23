@@ -13,7 +13,7 @@
 
       $(document).ready(function(){
         $("form").submit(function(){
-          $("#output").text("Mr. That" + toTitleCase($("[name=input]").val()));
+          $("#output").text("Mr. That" + toTitleCase($("[name=input]").val()).replace(/\s/g, ""));
           return false;
         });
       });
@@ -32,6 +32,14 @@
         box-shadow:0px 3px 20px #404040;
       }
       input {border-width:1px;border-style:solid;border-color:#707070;}
+      #titlething {
+        position:absolute;
+        bottom:0;
+        right:0;
+        transform:translate(-20px, 130px);
+        font-size:150px;
+        opacity:0.3;
+      }
     </style>
   </head>
   <body>
@@ -41,5 +49,6 @@
       </form>
       <h2 id="output">Result will go here</h2>
     </div>
+    <p id="titlething">Mr. ThatWord</p>
   </body>
 </html>
