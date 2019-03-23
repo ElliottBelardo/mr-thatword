@@ -4,9 +4,17 @@
     <title>Mr. ThatWord</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
+      // this function literally just copypasted from stackoverflow
+      function toTitleCase(str) {
+          return str.replace(/(?:^|\s)\w/g, function(match) {
+              return match.toUpperCase();
+          });
+      }
+
       $(document).ready(function(){
         $("form").submit(function(){
-          $("#output").text("Mr. That" + $("[name=input]").val());
+          $("#output").text("Mr. That" + toTitleCase($("[name=input]").val()));
+          return false;
         });
       });
     </script>
