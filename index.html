@@ -16,6 +16,9 @@
           $("#output").text("Mr. That" + toTitleCase($("[name=input]").val()).replace(/\s/g, ""));
           return false;
         });
+        $("button").click(function(){
+          $("#infodiv").toggle();
+        });
       });
     </script>
     <style>
@@ -64,9 +67,9 @@
     </div>
     <p id="titlething">Mr. ThatWord</p>
     <div id="infocontainer">
-      <button type="button" name="button" onclick="">About</button>
-      <div id="infodiv">
-        test
+      <button type="button" name="button">About</button>
+      <div id="infodiv" hidden>
+        Here's some placeholder text while I work on the code for this section
       </div>
     </div>
   </body>
